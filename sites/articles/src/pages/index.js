@@ -1,5 +1,5 @@
 import React from "react"
 
 export default function Home() {
-  return <div>Homepage in a user's site</div>
+  return <div>This is the articles site.</div>
 }

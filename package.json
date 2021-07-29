@@ -5,10 +5,14 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
-    "build": "yarn workspace example build"
+    "build:articles": "yarn workspace articles build",
+    "build:festivals": "yarn workspace festivals build",
+    "serve:articles": "yarn workspace articles serve",
+    "serve:festivals": "yarn workspace festivals serve"
   },
   "workspaces": [
-    "gatsby-theme-minimal",
-    "example"
+    "themes/gg-theme",
+    "sites/articles",
+    "sites/festivals"
   ]
 }

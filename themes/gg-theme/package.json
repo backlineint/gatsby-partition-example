@@ -1,0 +1,15 @@
+{
+  "name": "gg-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^3.3.0"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby-plugin-mdx": "^2.10.1",
+    "gatsby-source-filesystem": "^3.10.0"
+  }
+}

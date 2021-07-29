@@ -1,8 +1,7 @@
 {
-  "name": "example",
+  "name": "articles",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -10,7 +9,7 @@
   },
   "dependencies": {
     "gatsby": "^3.10.2",
-    "gatsby-theme-minimal": "^1.0.0",
+    "gg-theme": "1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

@@ -1,3 +1,21 @@
+# Gatsby Partition Example
+
+(This repository is a work in progress)
+
+This example repository uses a shared theme to serve multiple sites. Each site deals with a subset of the overall site dataset.
+
+To view the 'articles' site run:
+
+`yarn run build:articles`
+`yarn run serve:articles`
+
+To view the 'festivals' site run:
+
+`yarn run build:festivals`
+`yarn run serve:festivals`
+
+---
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
