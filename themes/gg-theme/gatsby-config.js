@@ -1,12 +1,15 @@
-module.exports = {
+module.exports = ({ type }) => ({
+  siteMetadata: {
+    type: type,
+  },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `data`,
-        // TODO - Make type configurable.
-        path: `../../mock-data/articles`,
+        name: `mdData`,
+        path: `../../mock-data`,
       }
     },
+    "gatsby-plugin-mdx",
   ]
-}
+})
