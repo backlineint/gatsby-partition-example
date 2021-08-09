@@ -5,6 +5,8 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
+    "develop:articles": "yarn workspace articles develop",
+    "develop:festivals": "yarn workspace festivals develop",
     "build:articles": "yarn workspace articles build",
     "build:festivals": "yarn workspace festivals build",
     "serve:articles": "yarn workspace articles serve",
