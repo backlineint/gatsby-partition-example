@@ -1,18 +1,68 @@
 # Gatsby Partition Example
 
-(This repository is a work in progress)
+This repository includes a simplified example of a Gatsby site partitioned into
+two build assets based on a content type and URL path.
 
-This example repository uses a shared theme to serve multiple sites. Each site deals with a subset of the overall site dataset.
+In order to be able to share common functionality across Gatsby sites (or in this case partitions,) this example uses [Gatsby themes](https://www.gatsbyjs.com/docs/themes/). The use of a Gatsby theme will make it possible to share configuration (including data sourcing) and components across each of these partitioned sites. The sites themselves would be based on a custom [Gatsby starter](https://www.gatsbyjs.com/docs/creating-a-starter/) in order to simplify the process for creating new partitioned sites.
+
+## Project Structure
+
+/themes
+	/gg-theme
+/sites
+	/articles
+	/festivals
+/mock-data
+/node_modules
+package.json
+
+## Yarn Workspaces
+
+Gatsby themes are often [used in combination with Yarn workspaces](https://www.gatsbyjs.com/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) in order to simplify local development.
 
 To view the 'articles' site run:
+
+`yarn run develop:articles`
+
+or:
 
 `yarn run build:articles`
 `yarn run serve:articles`
 
 To view the 'festivals' site run:
 
+`yarn run develop:articles`
+
+or
+
 `yarn run build:festivals`
 `yarn run serve:festivals`
+
+## Configuration
+
+Configuration and components can be shared across sites by using a Gatsby theme.
+
+Each site uses `gg-theme` as a dependency and passes a `type` configuration to the theme. 
+This type is used to determine which content to source for each partitioned site.
+
+```js
+module.exports = {
+  plugins: [
+    { resolve: `gg-theme`, options: { type: 'articles'} }
+  ],
+}
+```
+
+This example is simple, but is intended to demonstrate how a theme can respond to configuration
+options from a consuming site.
+
+## Component Shadowing
+
+Within each site, components can be overridden with an approach called [shadowing](https://www.gatsbyjs.com/blog/2019-04-29-component-shadowing/).
+The card component in `sites/festivals/src/gg-theme/components/card.js` overrides the `Card` component from the `gg-theme` package in order to demonstrate this concept.
+
+This approach should be used sparingly - using the default component from the theme
+will lead to more consistency and is often a better option.
 
 ---
 
