@@ -1,17 +1,19 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+
+import Card from "../../components/card";
 
 const IndexPage = ({ data }) => {
   console.log(data);
   const type = data.site.siteMetadata.type;
   const formattedType =  type.charAt(0).toUpperCase() + type.slice(1);
   return (
-    <>
-      <h1>{ formattedType }</h1>
+    <div class="bg-blue-100 h-screen">
+      <h1 class="py-10 text-center text-5xl font-bold">{ formattedType }</h1>
       { data.allSitePage.edges.map(node => (
-        <h3 key={node.node.id}><Link to={node.node.path}>{node.node.fields.title}</Link></h3>
+        <Card id={node.node.id} path={node.node.path} title={node.node.fields.title} />
       ))}
-    </>
+    </div>
   )
 }
 

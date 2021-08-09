@@ -11,5 +11,6 @@ module.exports = ({ type }) => ({
       }
     },
     "gatsby-plugin-mdx",
+    "gatsby-plugin-postcss"
   ]
 })
